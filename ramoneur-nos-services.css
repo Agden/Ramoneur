@@ -1,0 +1,480 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* met le logo à gauche et le contact à droite */
+    align-items: center;            /* aligne verticalement les éléments */
+    margin: 0px;
+    padding: 5px;
+    background-color: rgb(250, 72, 17);
+    width: 100%;
+    max-width: 100%;
+}
+
+.contact-navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    display: flex; /* Ajout de flexbox */
+    justify-content: flex-end; /* Aligne le numéro de téléphone à droite */
+    align-items: center; /* Aligne verticalement */
+    width: 100%;
+}
+
+.contact-navbar a {
+    display: flex;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400;
+    font-size: 22px;
+    padding: 10px 20px; /* Ajuste l'espacement autour du texte */
+    margin-right: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.item-nav {
+    color: #000000;
+    font-weight: 400;
+    font-size: 22px;
+    padding: 10px 20px;
+    font-style: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bi-envelope {
+    font-style: normal;
+}
+
+.contact-navbar a:hover {
+    color: #000000;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+    border: 15px;
+    border-radius: 5px;
+    margin-left: 50px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 600px) {
+    .logo {
+        width: 150px;  /* logo plus petit sur petits écrans */
+    }
+}
+
+
+/* Style de la barre de menu */
+.barre-menu {
+    background-color: #4e4e4e; /* Fond blanc */
+    display: flex;
+    justify-content: center; /* Centre le menu */
+    padding: 5px 0;
+    border-bottom: 2px solid #474343; /* Ligne de séparation subtile */
+    border-top: 2px solid #474343
+}
+
+/* Style de la liste du menu */
+.liste-menu {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Espacement entre les éléments */
+    padding: 0;
+    margin: 0;
+}
+
+/* Style des éléments du menu */
+.liste-menu li {
+    position: relative;
+    padding: 5px 10px; /* Réduit le padding des éléments du menu */
+    list-style: none;
+    transition: background-color 0.3s ease-in-out;
+    flex: 1; /* Chaque élément prend un espace égal */
+    text-align: center; /* Centre le texte */
+    min-width: 100px;
+    
+}
+
+/* Style des liens */
+.liste-menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px; /* Hauteur uniforme */
+    width: 100%;
+    text-decoration: none;
+    color: #000000; /* Couleur du texte */
+    font-size: 18px;
+    font-weight: bold;
+    display: block; /* Permet de remplir tout l’espace du <li> */
+    padding: 10px 20px; /* Ajuste l’espace autour du texte */
+}
+.liste-menu li:hover {
+    opacity: 0.8;
+}
+
+/* Changement de couleur au survol */
+.liste-menu a:hover {
+    color: rgb(250, 72, 17); /* Couleur au survol */
+}
+
+/* Accueil Barre soulignée animée */
+.menu-souligne-accueil {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background-color: rgb(250, 72, 17);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Animation au survol */
+.liste-menu li:hover .menu-souligne-accueil {
+    width: 100%;
+    left: 0;
+}
+
+.accueil {
+    padding: 10px 15px;
+    border-radius: 5px; /* Coins arrondis pour un meilleur rendu */
+}
+
+.menu-souligne-a-propos {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background-color: rgb(250, 72, 17);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Animation au survol */
+.liste-menu li:hover .menu-souligne-a-propos {
+    width: 100%;
+    left: 0;
+}
+
+.a-propos {
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.menu-souligne-nos-services {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background-color: rgb(250, 72, 17);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Animation au survol */
+.liste-menu li:hover .menu-souligne-nos-services {
+    width: 100%;
+    left: 0;
+}
+
+.nos-services {
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.menu-souligne-nous-contacter {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background-color: rgb(250, 72, 17);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Animation au survol */
+.liste-menu li:hover .menu-souligne-nous-contacter {
+    width: 100%;
+    left: 0;
+}
+
+.nous-contacter {
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.menu-souligne-a-savoir {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background-color: rgb(250, 72, 17);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Animation au survol */
+.liste-menu li:hover .menu-souligne-a-savoir {
+    width: 100%;
+    left: 0;
+}
+
+.a-savoir {
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.bandeau-couleur {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(250, 72, 17);
+    opacity: 0.9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container-texte {
+    position: absolute;
+    top: 64%; /* Centre verticalement */
+    left: 50%; /* Centre horizontalement */
+    transform: translate(-50%, -50%); /* Ajuste pour un centrage parfait */
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour améliorer la lisibilité */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%; /* Ajuste la largeur du conteneur */
+    max-width: 600px;
+}
+
+.container-texte h1 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container-texte p {
+    color: rgb(250, 72, 17);
+    font-size: 20px;
+}
+
+/*Contenu Main*/
+.container-main1 {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+img {
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+}
+.rappel1 {
+    display: flex;
+    align-items: center;
+}
+
+.rappel-texte1 {
+    display: flex; 
+    border: 4px solid rgb(250, 72, 17);
+    border-radius: 10px;
+    width: 700px;
+    height: 500px;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.rappel-texte1 h1{
+    color: rgb(250, 72, 17);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.rappel-texte1 ul {
+    color: #5c5c5c;
+    font-size: 15px;
+}
+
+.rappel-texte1 h2 {
+    color: rgb(250, 72, 17);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.container-main2 {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
+
+.ramonage {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.texte-ramonage {
+    text-align: justify;
+    margin: 20px;
+    padding: 10px;
+    border: rgb(250, 72, 17) solid 4px;
+    border-radius: 5px;
+    color: #5c5c5c;
+}
+
+.texte-ramonage h1 {
+    color: rgb(250, 72, 17);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.point {
+    color: rgb(250, 72, 17);
+}
+.debistrage {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+}
+.texte-debistrage {
+    text-align: justify;
+    margin: 20px;
+    padding: 10px;
+    border: rgb(250, 72, 17) solid 4px;
+    border-radius: 5px;
+    color: #5c5c5c;
+}
+.texte-debistrage h1 {
+    text-align: center;
+    color: rgb(250, 72, 17);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.texte-debistrage h3 {
+    text-align: center;
+    color: rgb(250, 72, 17);
+    text-shadow:1px 1px 2px rgba(0, 0, 0, 0.5)
+}
+
+.item-attention {
+    color: #e42d2d;
+    font-weight: 400;
+}
+.section-offre {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 700px;
+    max-height: 400px;
+}
+
+.offre {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+}
+.texte-promo {
+    text-align: justify;
+    align-items: center;
+    width: 50%;
+    margin: 20px;
+    padding: 10px;
+    border: rgb(250, 72, 17) solid 4px;
+    border-radius: 5px;
+    color: #5c5c5c;
+}
+.texte-promo h3 {
+    color: rgb(250, 72, 17);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.point-promo {
+    color: rgb(250, 72, 17);
+}
+
+/*FOOTER*/
+
+.container-footer {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-around;
+    background-color: rgb(250, 72, 17);
+    color: #000000;
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
+    border: 2px solid rgb(250, 72, 17);
+}
+
+.logo-footer{
+    max-width: 110px; 
+    max-height: 110px; 
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.texte1-footer {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    font-size: 13px;
+    font-weight: 500;
+
+}
+
+.texte2-footer {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    font-size: 13px;
+    font-weight: 500;
+
+}
+
+.texte3-footer {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.logo-smalltext-footer {
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+.small-text-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: -55px;
+    margin-top: 15px;
+    font-size: 12px;
+}
